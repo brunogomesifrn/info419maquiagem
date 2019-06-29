@@ -1,0 +1,34 @@
+{% extends 'pagina_inicial.html' %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+
+<form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+          <div class="control-group form-group">
+            <div class="controls">
+              {{form.livro.tipos}}:{{form.tipos|add_class:"form-control"}}
+              <p class="help-block"></p>
+            </div>
+          </div>
+
+          <div class="control-group form-group">
+            <div class="controls">
+              {{form.valor.label}}:{{form.valor|add_class:"form-control"}}
+              <p class="help-block"></p> 
+            </div>
+          </div>
+
+          <div class="control-group form-group">
+            <div class="controls">
+              {{form.foto_livro.label}}:{{form.foto_livro|add_class:"form-control"}}
+                <p class="help-block"></p>
+            </div>
+          </div>
+          <br />
+    </form>
+
+    <p><a href="{% url 'usuario' %}"><button type="submit" class="btn btn-primary" id="sendMessageButton">Salvar</button></a></p>
+
+{% endblock %}
