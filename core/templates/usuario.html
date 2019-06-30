@@ -20,16 +20,16 @@
                 </tr>
               </thead>
               <tbody>
-                {% for Maquiagem in lista_Maquiagem %}
+                {% for lista in lista_Maquiagem %}
                 <tr>
-                  <th scope="row">{{Maquiagem.nome}}</th>
-                    <td>{{Maquiagem.valor}}</td>
-                    <td>{{Maquiagem.Descrição}}</td>
+                  <th scope="row">{{lista.nome}}</th>
+                    <td>{{lista.valor}}</td>
+                    <td>{{lista.descricao}}</td>
                     <!--<td>{{Tipo.nome}}</td>-->
-                    <td><img src="/foto/{{Maquiagem.foto}}" width="80px" height="100px"></td>
+                    <td><img src="/foto/{{lista.foto}}" width="80px" height="100px"></td>
                     <td>
-                      <a href="{% url 'editar' Maquiagem.id %}"><button type="button" class="btn btn-info">Editar</button></a>
-                      <a href="{% url 'excluir' Maquiagem.id %}"><button type="button" class="btn btn-danger">Excluir</button></a>
+                      <a href="{% url 'editar' lista.id %}"><button type="button" class="btn btn-info">Editar</button></a>
+                      <a href="{% url 'excluir' lista.id %}"><button type="button" class="btn btn-danger">Excluir</button></a>
                   </td>
 
                 </tr>
@@ -40,7 +40,7 @@
               </tbody>
     </table>
 
-    <p><a href="{% url 'Novo Produto' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Adicionar</button></a></p>
+    <p><a href="{% url 'adicionar' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Adicionar</button></a></p>
     <p><a href="{% url 'logout' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Logout</button></a></p>
 
 {% endblock%}

@@ -7,7 +7,7 @@ class TipoForm(ModelForm):
 		fields = ['nome']
 
 class MaquiagemForm(ModelForm):
-	class Meta():
+	class Meta(): 
 		model = Maquiagem
 		fields = ['nome', 'valor', 'descricao', 'tipos', 'foto']
 	
