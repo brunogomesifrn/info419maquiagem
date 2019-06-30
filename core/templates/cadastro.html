@@ -2,19 +2,31 @@
 {% load widget_tweaks %}
 
 {% block conteudo %}
+{% csrf_token %}
 
-    <form class="form-signin">
+
+  <link rel="stylesheet" type="text/css"
+  href="/static/css/estilo.css">
+
+  <form class="form-signin">
   <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
-  <label for="inputEmail" class="sr-only">Email</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-  <label for="inputPassword" class="sr-only">Senha</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-  <label for="inputPassword" class="sr-only">Repetir a senha:</label>
-  <input type="password" id="inputPassword2" class="form-control" placeholder="Repetir a senha" required>
-  <div class="checkbox mb-3">
+  <h1 class="h3 mb-3 font-weight-normal">CADASTRE-SE</h1>
+  <label for="inputEmail" class="sr-only">Email</label> <p class="auten"> Email </p> <p class="auten">  {{ form.username }}
+  {% render_field form.nome class="campo" placeholder="Digite o seu nome" %}</p>
+  <!--<input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>-->
+  <label for="inputPassword" class="sr-only">Senha</label> <p class="auten"> Senha </p> <p class="auten">  {{ form.password1 }}
+  {% render_field form.nome class="campo" placeholder="Digite o seu nome" %}</p>
+  <!--<input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>-->
+  <label for="inputPassword" class="sr-only">Repetir a senha:</label> <p class="auten"> Repetir a Senha: </p> <p class="auten">  {{ form.password2 }}
+  {% render_field form.nome class="campo" placeholder="Digite o seu nome" %}</p>
+  <!--<input type="password" id="inputPassword2" class="form-control" placeholder="Repetir a senha" required>
+  <div class="checkbox mb-3">-->
   </div>
-  <p><a href="{% url 'usuario' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button></a></p>
-</form>
+  <p class="auten"><a href="{% url 'usuario' %}"><button class="btn btn-lg btn-primary " type="submit">Cadastrar Usuário</button></a></p>
+  </form>
 
 {% endblock %}
+
+
+
+<!--btn-block-->
