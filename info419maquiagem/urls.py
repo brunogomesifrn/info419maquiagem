@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from core.views import cadastro, pagina, usuario, adicionar
+from core.views import cadastro, pagina, usuario, adicionar, editar, excluir
 
 
 urlpatterns = [
@@ -27,5 +27,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('usuario/', usuario, name='usuario'),
     path('Novo Produto/', adicionar, name='Novo Produto'),
+    path('editar/', editar, name='editar'),
+    path('excluir/', excluir, name='excluir'),
 
 ]

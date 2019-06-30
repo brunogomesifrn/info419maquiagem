@@ -12,3 +12,5 @@ class Maquiagem(models.Model):
 	foto= models.ImageField('Foto', upload_to="fotos", null=True)
 
 
+
+

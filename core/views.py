@@ -27,3 +27,23 @@ def usuario(request):
 def adicionar(request):
 	return render(request, 'add.html')
 
+def editar(request, id):
+	Maquiagem = Maquiagem.objects.get(pk=id)
+	form = MaquiagemForm(request.POST or None, request.FILES or None, instance=tipo)
+
+	if form.is_valid():
+		form.save()
+		return redirect('usuario')
+
+	contexto = {
+	'form': form
+	}
+
+	return render(request, 'usuario.html', contexto)
+
+def excluir(request, id):
+	Maquiagem = Maquiagem.objects.get(pk=id)
+	Maquiagem.delete()
+	
+	return redirect('usuario')
+

@@ -8,7 +8,7 @@
         
           <div class="control-group form-group">
             <div class="controls">
-              {{form.livro.tipos}}:{{form.tipos|add_class:"form-control"}}
+              {{form.nome.label}}:{{form.nome|add_class:"form-control"}}
               <p class="help-block"></p>
             </div>
           </div>
@@ -22,7 +22,14 @@
 
           <div class="control-group form-group">
             <div class="controls">
-              {{form.foto_livro.label}}:{{form.foto_livro|add_class:"form-control"}}
+              {{form.Descrição.label}}:{{form.Descrição|add_class:"form-control"}}
+              <p class="help-block"></p> 
+            </div>
+          </div>
+
+          <div class="control-group form-group">
+            <div class="controls">
+              {{form.foto.label}}:{{form.foto|add_class:"form-control"}}
                 <p class="help-block"></p>
             </div>
           </div>
