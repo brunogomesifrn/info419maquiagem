@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .models import Maquiagem
-from .forms import  MaquiagemForm
+from .models import Maquiagem, Tipo
+from .forms import  MaquiagemForm, TipoForm
+
 #from django.contrib.auth.models import User
 # Create your views here.
 
@@ -23,11 +24,17 @@ def cadastro(request):
 	}
 	return render(request, 'cadastro.html', contexto)
 
-def usuario(request):
-	return render(request, 'usuario.html')
-
 def adicionar(request):
-	return render(request, 'add.html')
+	form = MaquiagemForm(request.POST or None, request.FILES or None)
+
+	if form.is_valid():
+		form.save()
+		return redirect('usuario')
+	
+	contexto = {
+	'form': form
+	}
+	return render(request, 'add.html', contexto)
 
 def editar(request, id):
 	Maquiagem = Maquiagem.objects.get(pk=id)

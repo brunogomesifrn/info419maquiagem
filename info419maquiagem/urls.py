@@ -21,7 +21,7 @@ from core.views import cadastro, pagina, usuario, adicionar, editar, excluir
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Maquiagem/',pagina, name= 'pagina'),
+    path('make/',pagina, name= 'pagina'),
     path('logout/', auth_views.LogoutView.as_view(), name = "logout"),
     path('cadastro/', cadastro, name='cadastro'),
     path('login/', auth_views.LoginView.as_view(), name='login'),
