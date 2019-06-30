@@ -2,8 +2,6 @@ body{
     
     background-image: url(a.jpg);
 }
-h1,p 
-{text-align: center}
 .titulo
 {
 border-bottom: solid black 1px;
@@ -11,5 +9,5 @@ margin-bottom: 20px;
 padding-top: 20px;
 padding-bottom: 20px
 }
-.bandas
-{text-align:center}
+.gloss{
+text-align:center}
