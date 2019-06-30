@@ -20,19 +20,21 @@
                 </tr>
               </thead>
               <tbody>
-                {% for lista in lista_Maquiagem %}
+                {% for Maquiagem in lista_Maquiagem %}
                 <tr>
                   <th scope="row">{{Maquiagem.nome}}</th>
                     <td>{{Maquiagem.valor}}</td>
                     <td>{{Maquiagem.Descrição}}</td>
-                    <td>{{Tipo.nome}}</td>
+                    <!--<td>{{Tipo.nome}}</td>-->
                     <td><img src="/foto/{{Maquiagem.foto}}" width="80px" height="100px"></td>
                     <td>
                       <a href="{% url 'editar' Maquiagem.id %}"><button type="button" class="btn btn-info">Editar</button></a>
                       <a href="{% url 'excluir' Maquiagem.id %}"><button type="button" class="btn btn-danger">Excluir</button></a>
                   </td>
-                </tr>
 
+                </tr>
+                {% empty %}
+                Nenhuma maquiagem foi cadastrada
                 {% endfor %}
 
               </tbody>
