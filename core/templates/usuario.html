@@ -29,10 +29,12 @@
                       <a href="{% url 'excluir' tipo.id %}"><button type="button" class="btn btn-danger">Excluir</button></a>
                   </td>
                 </tr>
+
                 {% endfor %}
               </tbody>
     </table>
 
     <p><a href="{% url 'Novo Produto' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Adicionar</button></a></p>
+    <p><a href="{% url 'logout' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Logout</button></a></p>
 
 {% endblock%}

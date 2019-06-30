@@ -21,7 +21,15 @@
 
 <div class="container">
 
+<p class="menu">
+<a href="{% url 'usuario' %}"><button class="btn btn-lg btn-primary " type="submit">Página do Usuário</button></a> 
+<a href="{% url 'login' %}"><button class="btn btn-lg btn-primary" type="submit">Login</button></a>
+<a href="{% url 'cadastro' %}"><button class="btn btn-lg btn-primary" type="submit">Cadastre-se</button></a> 
+</p>
+
+
    <h1 class="mt-12 mb-12">Maquiagens</h1>
+
 
    <hr />
 
@@ -57,10 +65,16 @@
               </tbody>
     </table>
 
-              <br />
-<p><a href="{% url 'usuario' %}"><button type="button" class="btn btn-primary">Página do Usuário</button></a></p>
+              
+
+<!--<p><a href="{% url 'usuario' %}"><button type="button" class="btn btn-primary">Página do Usuário</button></a></p>
 <p><a href="{% url 'cadastro' %}"><button type="button" class="btn btn-primary">Cadastrar-se</button></a></p>
 <p><a href="{% url 'login' %}"><button type="button" class="btn btn-primary">Login</button></a></p> 
+<p><a href="{% url 'usuario' %}"><button class="btn btn-lg btn-primary " type="submit">Página do Usuário</button></a> 
+<a href="{% url 'cadastro' %}"><button class="btn btn-lg btn-primary" type="submit">Cadastre-se</button></a> 
+<a href="{% url 'login' %}"><button class="btn btn-lg btn-primary" type="submit">Login</button></a></p>-->
+
+
 <br />
       		{% endblock %}
 
