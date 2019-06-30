@@ -1,5 +1,7 @@
 from django.db import models
 
+#class Login(models.Model):
+	#email = EmailField(max_length=30)-->
 
 class Tipo(models.Model):
 	nome = models.CharField('Nome', max_length=150)
