@@ -121,3 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/foto/'
+
+MEDIA_ROOT = 'foto'
+
+LOGIN_URL = '/login/'
+
+LOGIN_REDIRECT_URL =  'usuario'
+
+LOGOUT_REDIRECT_URL =  'pagina'

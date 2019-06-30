@@ -9,7 +9,7 @@ def cadastro(request):
 	return render(request, 'cadastro.html')
 
 def login(request):
-	return render(request, 'login.html')
+	return render(request, 'registration/login.html')
 
 def usuario(request):
 	return render(request, 'usuario.html')
