@@ -1,0 +1,19 @@
+{% extends 'pagina_inicial.html' %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+
+<form method="POST">
+
+        {% csrf_token %}
+
+          <div class="control-group form-group">
+            <div class="controls">
+              {{form.nome.label}}:{{form.nome|add_class:"form-control"}}
+              <p class="help-block"></p>
+            </div>
+          </div>
+	<button type="submit" class="btn btn-primary" id="sendMessageButton">Salvar</button></a></p>
+</form>
+
+{% endblock %}

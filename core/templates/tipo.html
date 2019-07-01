@@ -1,0 +1,38 @@
+{% extends 'pagina_inicial.html' %}
+{% load widget_tweaks %}
+
+
+{% block conteudo %}
+
+  <p class="h3 mb-3 font-weight-normal">SUAS MAQUIAGENS</p>
+
+    <div class="row">
+      <div class="col-lg-12 mb-12">
+
+  <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Gerenciar</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lista in lista_Tipo %}
+                <tr>
+                  <th scope="row">{{lista.nome}}</th>
+                    <td>
+                      <a href="{% url 'editartipo' lista.id %}"><button type="button" class="btn btn-info">Editar</button></a>
+                      <a href="{% url 'excluirtipo' lista.id %}"><button type="button" class="btn btn-danger">Excluir</button></a>
+                  </td>
+
+                </tr>
+                {% empty %}
+                Nenhum Tipo de maquiagem foi cadastrada
+                {% endfor %}
+
+              </tbody>
+    </table>
+
+    <p><a href="{% url 'Cadastrartipo' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar Tipo</button></a></p>
+    <p><a href="{% url 'usuario' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Voltar</button></a></p>
+{% endblock %}

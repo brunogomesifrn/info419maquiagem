@@ -14,8 +14,8 @@
                 <tr>
                   <th scope="col">Maquiagem</th>
                   <th scope="col">Valor</th>
+                  <th scope="col">Desrição</th>
                   <th scope="col">Foto</th>
-                  <th scope="col">Descrição</th>
                   <th scope="col">Gerenciar</th>
                 </tr>
               </thead>
@@ -40,7 +40,8 @@
               </tbody>
     </table>
 
-    <p><a href="{% url 'adicionar' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Adicionar</button></a></p>
+    <p><a href="{% url 'tipo' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Tipo de Makes Disponíveis</button></a></p>
+    <p><a href="{% url 'adicionar' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar Produto</button></a></p>
     <p><a href="{% url 'logout' %}"><button class="btn btn-lg btn-primary btn-block" type="submit">Logout</button></a></p>
 
 {% endblock%}

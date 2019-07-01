@@ -18,18 +18,22 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
-from core.views import cadastro, pagina, usuario, adicionar, editar, excluir
+from core.views import cadastro, pagina, usuario, adicionar, tipo, Cadastrartipo, editartipo, excluirtipo, editar, excluir
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('make/',pagina, name= 'pagina'),
+    path('make/',pagina, name= "pagina"),
     path('logout/', auth_views.LogoutView.as_view(), name = "logout"),
-    path('cadastro/', cadastro, name='cadastro'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('usuario/', usuario, name='usuario'),
-    path('adicionar/', adicionar, name='adicionar'),
-    path('editar/<int:id>', editar, name='editar'),
-    path('excluir/<int:id>', excluir, name='excluir'),
+    path('cadastro/', cadastro, name="cadastro"),
+    path('login/', auth_views.LoginView.as_view(), name="login"),
+    path('usuario/', usuario, name="usuario"),
+    path('tipo/', tipo, name="tipo"),
+    path('Cadastrar Tipo/', Cadastrartipo, name="Cadastrartipo"),
+    path('editartipo/<int:id>/', editartipo, name="editartipo"),
+    path('excluirtipo/<int:id>/', excluirtipo, name="excluirtipo"),
+    path('adicionar/', adicionar, name="adicionar"),
+    path('editar/<int:id>/', editar, name="editar"),
+    path('excluir/<int:id>/', excluir, name="excluir"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
