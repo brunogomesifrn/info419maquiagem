@@ -29,7 +29,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('usuario/', usuario, name='usuario'),
     path('adicionar/', adicionar, name='adicionar'),
-    path('editar/', editar, name='editar'),
-    path('excluir/', excluir, name='excluir'),
+    path('editar/<int:id>', editar, name='editar'),
+    path('excluir/<int:id>', excluir, name='excluir'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

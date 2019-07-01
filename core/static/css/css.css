@@ -1,14 +1,18 @@
 body{
-    
-    background-image: url(a.jpg);
+background-image: url(a.jpg);
 }
+
 .titulo
 {
-	border-bottom: solid black 1px;
-	margin-bottom: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px
+border-bottom: solid black 1px;
+	
+margin-bottom: 20px;
+	
+padding-top: 20px;
+	
+padding-bottom: 20px
 }
+
 .gloss{
 	text-align:center;
 }
