@@ -101,7 +101,7 @@ def editar(request, id):
 
 def excluir(request, id):
 	lista = Maquiagem.objects.get(pk=id)
-	Maquiagem.delete()
+	lista.delete()
 	
 	return redirect('usuario')
 
